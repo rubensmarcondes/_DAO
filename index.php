@@ -33,7 +33,7 @@ require_once("config.php");
 //echo $usuario;
 
 //============================================
-// Inserir novo usuario (ANTES MET. CONSTRUTOR)
+// INSERT USER (ANTES MET. CONSTRUTOR)
 //============================================
 //$aluno = new Usuario();
 //$aluno->setLogin("RubensM");
@@ -42,17 +42,25 @@ require_once("config.php");
 //echo $aluno;
 
 //============================================
-// Inserir novo usuario (COM MET. CONSTRUTOR)
+// INSERT USER (COM MET. CONSTRUTOR)
 //============================================
 //$aluno = new Usuario("RubensM","213rew423");
 //$aluno->insert();
 //echo $aluno;
 
 //============================================
-// Inserir novo usuario (COM MET. CONSTRUTOR)
+// UPDATE USER
+//============================================
+//$usuario = new Usuario();
+//$usuario->loadById(13);
+//$usuario->update("professor","naoaa");
+//echo $usuario;
+
+//============================================
+// DELETE USER
 //============================================
 $usuario = new Usuario();
 $usuario->loadById(13);
-$usuario->update("professor","naoaa");
+$usuario->delete();
 echo $usuario;
 ?>

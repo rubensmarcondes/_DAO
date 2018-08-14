@@ -41,6 +41,24 @@ class Usuario{
 	public function setDtCadastro($dt_cadastro){
 		$this->dt_cadastro = $dt_cadastro;
 	}
+	
+	/*	Método DELETE
+		@author: RubensM
+		@date: 08/18
+	*/
+	public function delete(){
+		
+		$sql = new Sql();
+		$sql->query("DELETE FROM tb_usuarios WHERE id_usuario = :ID", array(
+		":ID"=>$this->getIdUsuario()
+		));
+		
+		$this->setIdUsuario(0);
+		$this->setLogin("");
+		$this->setSenha("");
+		$this->setDtCadastro(new DateTime());
+	}
+	
 	/*  Método que retorna todos o usuarios cadastrados
 		@author: RubensM
 		@date: 08/18
