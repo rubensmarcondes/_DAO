@@ -28,7 +28,31 @@ require_once("config.php");
 //============================================
 // Retorna uma lista de usuario
 //============================================
+//$usuario = new Usuario();
+//$usuario->login('rubens','marcondes');
+//echo $usuario;
+
+//============================================
+// Inserir novo usuario (ANTES MET. CONSTRUTOR)
+//============================================
+//$aluno = new Usuario();
+//$aluno->setLogin("RubensM");
+//$aluno->setSenha("rbs123");
+//$aluno->insert();
+//echo $aluno;
+
+//============================================
+// Inserir novo usuario (COM MET. CONSTRUTOR)
+//============================================
+//$aluno = new Usuario("RubensM","213rew423");
+//$aluno->insert();
+//echo $aluno;
+
+//============================================
+// Inserir novo usuario (COM MET. CONSTRUTOR)
+//============================================
 $usuario = new Usuario();
-$usuario->login('rubens','marcondes');
+$usuario->loadById(13);
+$usuario->update("professor","naoaa");
 echo $usuario;
 ?>
